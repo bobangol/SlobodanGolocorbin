@@ -12,7 +12,7 @@ public class AboutDialog extends AlertDialog.Builder{
         super(context);
 
         setTitle(R.string.dialog_about_title);
-        setMessage("Milos Simic");
+        setMessage("Slobodan Golocorbin");
         setCancelable(false);
 
         setPositiveButton(R.string.dialog_about_yes, new DialogInterface.OnClickListener() {
