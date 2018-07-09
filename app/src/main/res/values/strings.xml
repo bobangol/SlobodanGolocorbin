@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Slobodan Golocorbin</string>
+
+    <string name="activity_main_toolbar_title">Toolbar Title</string>
+
+    <string name="dialog_about_title">About</string>
+    <string name="dialog_about_message">Autor Slobodan Golocorbin</string>
+    <string name="dialog_about_yes">OK</string>
+    <string name="dialog_about_no">Cancel</string>
+</resources>
