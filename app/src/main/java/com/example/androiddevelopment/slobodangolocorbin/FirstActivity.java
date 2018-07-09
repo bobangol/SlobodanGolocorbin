@@ -22,7 +22,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.example.androiddevelopment.slobodangolocorbin.db.model.ORMLightHelper;
@@ -56,7 +55,7 @@ public class FirstActivity extends AppCompatActivity {
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-        final ListView listView = (ListView) findViewById(R.id.priprema_glumci_list);
+        final ListView listView = (ListView) findViewById(R.id.prijave_list);
 
         try {
             List<Prijava> list = getDatabaseHelper().getPrijavaDao().queryForAll();
@@ -94,7 +93,7 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     private void refresh() {
-        ListView listview = (ListView) findViewById(R.id.priprema_glumci_list);
+        ListView listview = (ListView) findViewById(R.id.prijave_list);
 
         if (listview != null){
             ArrayAdapter<Prijava> adapter = (ArrayAdapter<Prijava>) listview.getAdapter();
@@ -157,7 +156,6 @@ public class FirstActivity extends AppCompatActivity {
                         try {
                             getDatabaseHelper().getPrijavaDao().create(a);
 
-                            //provera podesenja
                             boolean toast = prefs.getBoolean(NOTIF_TOAST, false);
                             boolean stat = prefs.getBoolean(NOTIF_STATUS, false);
 
@@ -169,7 +167,6 @@ public class FirstActivity extends AppCompatActivity {
                                 showStatusMesage("Dodata nova prijava");
                             }
 
-                            //REFRESH
                             refresh();
 
                         } catch (SQLException e) {
@@ -181,6 +178,14 @@ public class FirstActivity extends AppCompatActivity {
                     }
                 });
 
+                Button cancel = (Button) dialog.findViewById(R.id.cancel_prijava);
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+
+        });
                 dialog.show();
 
                 break;

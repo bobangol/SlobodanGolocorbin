@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Slobodan Golocorbin</string>
 
-    <string name="activity_main_toolbar_title">Toolbar Title</string>
+    <string name="first_activity_toolbar_title">Toolbar Title</string>
 
     <string name="dialog_about_title">About</string>
     <string name="dialog_about_message">Autor Slobodan Golocorbin</string>
@@ -10,5 +10,11 @@
 
     <string name="fragment_detal_action_add">Add</string>
     <string name="fragment_detal_action_refresh">Refresh</string>
+
+    <string name="activity_main_name">First Activity</string>
+    <string name="activity_main_toolbar_title">Toolbar Title</string>
+
+    <string name="activity_settings_name">Second Activity</string>
+
 
 </resources>
