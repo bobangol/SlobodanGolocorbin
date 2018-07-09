@@ -104,6 +104,14 @@ public class Stavka {
         this.mImage = mImage;
     }
 
+    public Prijava getmUser() {
+        return mUser;
+    }
+
+    public void setmUser(Prijava mUser) {
+        this.mUser = mUser;
+    }
+
     @Override
     public String toString() {
         return mNaslov;
