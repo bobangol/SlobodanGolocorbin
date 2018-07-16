@@ -168,7 +168,7 @@ public class SecondActivity extends AppCompatActivity {
                 final Dialog dialog = new Dialog(this);
                 dialog.setContentView(R.layout.add_stavka);
 
-                Button add = (Button) dialog.findViewById(R.id.add_stavka);
+                Button add = (Button) dialog.findViewById(R.id.add_movie);
                 add.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -206,7 +206,7 @@ public class SecondActivity extends AppCompatActivity {
                 a.setmStatus(status.getText().toString());
 
                 try {
-                    getDatabaseHelper().getStavkaDao().update((PreparedUpdate<Stavka>) a);
+                    getDatabaseHelper().getPrijavaDao().update(a);
 
                     showMessage("Actor detail updated");
 
@@ -217,7 +217,8 @@ public class SecondActivity extends AppCompatActivity {
                 break;
             case R.id.remove:
                 try {
-                    getDatabaseHelper().getStavkaDao().delete((PreparedDelete<Stavka>) a);
+                    //getDatabaseHelper().getStavkaDao().delete((PreparedDelete<Stavka>) a);
+                    getDatabaseHelper().getPrijavaDao().delete(a);
 
                     showMessage("Stavka obrisana");
 
